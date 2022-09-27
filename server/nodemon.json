@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGODB_ATLAS_USERNAME": "todoapp",
+    "MONGODB_ATLAS_PASSWORD": "wFNvUYygAso94nF7",
+    "MONGODB_ATLAS_DBNAME": "database"
+  }
+}
