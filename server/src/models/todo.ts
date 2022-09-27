@@ -8,7 +8,7 @@ const todoSchema: Schema = new Schema(
       type: String,
       required: true,
     },
-    STATUS: {
+    status: {
       type: String,
       required: true,
     },
