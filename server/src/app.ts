@@ -2,6 +2,8 @@ import express, { Request, Response } from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 
+import routes from "./routes";
+
 // make express port
 const app = express();
 const PORT = 8080;
@@ -20,15 +22,17 @@ const options = { useNewUrlParser: true, useUnifiedTopology: true };
 // mencegah server terhalang cors policy
 app.use(cors());
 
-// get request and response and make route
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, world!");
-});
+// // get request and response and make route
+// app.get("/", (req: Request, res: Response) => {
+//   res.send("Hello, world!");
+// });
 
-// get request and response and make route
-app.get("/about", (req: Request, res: Response) => {
-  res.send("About this app");
-});
+// // get request and response and make route
+// app.get("/about", (req: Request, res: Response) => {
+//   res.send("About this app");
+// });
+
+app.use(routes);
 
 mongoose.set("useFindAndModify", true);
 // get uri and options above if after ...options) has ; delete or code will get error this use promise if connect/true then open port
